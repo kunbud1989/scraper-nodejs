@@ -1,7 +1,7 @@
 "use strict";
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 80
 const express = require('express')
 const request = require('request')
 
@@ -17,7 +17,7 @@ const timeout = 10000; //10 seconds
 
 
 // Router
-app.use('/scrap', function (req, res) {
+app.get('/scrap', function (req, res) {
 	res.setHeader('Content-Type', 'application/json');
 	let result = {
     status: 200,
@@ -61,7 +61,7 @@ app.use('/scrap', function (req, res) {
 
 	
 });
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   let result = {
     status: 200,
@@ -72,4 +72,6 @@ app.use('/', (req, res) => {
 
 
 app.listen(port, '0.0.0.0');
-console.log('Your server goes on localhost:' + port);
+// console.log('Your server goes on localhost:' + port);
+
+module.exports = app;
