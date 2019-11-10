@@ -1,0 +1,33 @@
+{
+  "name": "scraper-nodejs",
+  "version": "1.0.0",
+  "description": "Scrap News Website using Nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kunbud1989@github.com/kunbud1989/scraper-nodejs.git"
+  },
+  "keywords": [
+    "scraper",
+    "nodejs",
+    "news-website"
+  ],
+  "author": "Kun Budiharta <kun@beritagar.id>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kunbud1989/scraper-nodejs/issues"
+  },
+  "homepage": "https://github.com/kunbud1989/scraper-nodejs#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "jsdom": "^15.2.1",
+    "request": "^2.88.0"
+  }
+}
