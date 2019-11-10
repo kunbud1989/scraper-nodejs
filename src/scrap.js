@@ -16,7 +16,6 @@ function Scrap(body) {
     try {
       $$('script[type="application/ld+json"]').map(function (i, ld) {
         let jsonld = $$(this).html();
-        console.log(jsonld)
         jsonld = (JSON.parse(jsonld))
         if (jsonld['@type'] === "NewsArticle") {
       		json_ld = jsonld;
