@@ -3,7 +3,7 @@
 
 Dikarenakan kebutuhan untuk cleaning data semakin besar dan bervariasi, maka dibutuhkan tools yang lebih handal.
 
-Di versi sebelumnya **Mesin Cuci** menggunakan **Python** untuk mendapatkan informasi dari sebuah halaman web, pada versi ini developer mencoba untuk memanfaatkan **Google Extensions** yakni **[Reader View](https://add0n.com/chrome-reader-view.html)**.
+Di versi sebelumnya **Scrapper** sebelumnya menggunakan **Python** untuk mendapatkan informasi dari sebuah halaman web, pada versi ini developer mencoba untuk memanfaatkan **Google Extensions** yakni **[Reader View](https://add0n.com/chrome-reader-view.html)**.
 
 **Reader View** sendiri memanfaatkan teknologi Readability Document untuk dapat melihat isi konten dari sebuah halaman **HTML**. Dikarenakan Readability berplatform Javascript, maka diputuskan untuk menggunakan **Node.js** untuk core engine ini.
 
