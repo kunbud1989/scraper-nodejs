@@ -2,7 +2,6 @@
 const request = require('supertest')
 const app = require('../app')
 
-
 describe('GET /', function() {
   it('responds with json', function(done) {
     request(app)
@@ -13,6 +12,7 @@ describe('GET /', function() {
 
   });
 });
+
 describe('GET /scrap', function() {
   it('responds with json', function(done) {
     request(app)
@@ -23,7 +23,6 @@ describe('GET /scrap', function() {
   });
 });
 
-// afterAll(() => setTimeout(() => exit(), 1000))
 afterAll(done => {
   done()
-})
+});

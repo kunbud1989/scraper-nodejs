@@ -4,18 +4,13 @@ process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 const port = process.env.PORT || 80
 const express = require('express')
 const request = require('request')
-
 const Scrap = require('./src/scrap')
-
 const app = express()
-
 
 const headers = {
   'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
 };
 const timeout = 10000; //10 seconds 
-
-
 // Router
 app.get('/scrap', function (req, res) {
 	res.setHeader('Content-Type', 'application/json');
@@ -54,13 +49,10 @@ app.get('/scrap', function (req, res) {
 				result.message = "OK"
 				res.status(result.status).json(result);	
 			}
-			
 		})
-		
 	}
-
-	
 });
+
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   let result = {
@@ -69,7 +61,6 @@ app.get('/', (req, res) => {
   }
   res.status(200).json(result);
 });
-
 
 app.listen(port, '0.0.0.0');
 // console.log('Your server goes on localhost:' + port);
